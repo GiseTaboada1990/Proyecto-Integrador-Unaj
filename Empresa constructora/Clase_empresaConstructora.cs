@@ -64,5 +64,5 @@ namespace Empresa_constructora
 			grupoDeObras.Remove(grupoDeObreros);
 		}
 		//Métodos para recuperar
-		
+	}	
 }
