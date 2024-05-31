@@ -11,7 +11,7 @@ using System;
 namespace Empresa_constructora
 {
 	/// <summary>
-	/// Description of Clase_obras. Mensaje nuevo
+	/// Description of Clase_obras. Chau Mensaje nuevo
 	/// </summary>
 	
 		public Clase_obra()
