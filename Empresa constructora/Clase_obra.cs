@@ -1,27 +1,16 @@
-﻿/*
- * Created by SharpDevelop.
- * User: elizabeth.g.taboada
- * Date: 5/29/2024
- * Time: 5:49 PM
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Empresa_constructora
 {
-	/// <summary>
-	/// Description of Clase_obras. Chau Mensaje nuevo
-	/// </summary>
-	
-		public class Clase_obra
+		public class Clase_obra : EmpresaConstructora
 		{
 			//Atributos
 			private bool finalizado;
 			private double avance, costo;
 			private string nombrePropietario;
 			private int dni_propietario, codigo_interno;
+			
 			
 			//Constructor
 			public Clase_obra(bool finalizado, double costo, double avance, string nombrePropietario, int dni_propietario, int codigo_interno){
@@ -38,7 +27,7 @@ namespace Empresa_constructora
 					return finalizado;
 				}
 				set{
-					this.finalizado = value;
+					finalizado = value;
 				}
 			}
 			public double Avance{
@@ -46,7 +35,7 @@ namespace Empresa_constructora
 					return avance;
 				}
 				set{
-					this.avance = value;
+					avance = value;
 				}
 			}
 			public double Costo{
@@ -54,7 +43,7 @@ namespace Empresa_constructora
 					return costo;
 				}
 				set{
-					this.costo = value;
+					costo = value;
 				}
 			}
 			public string NombrePropietario{
@@ -62,7 +51,7 @@ namespace Empresa_constructora
 					return nombrePropietario;
 				}
 				set{
-					this.nombrePropietario = value;
+					nombrePropietario = value;
 				}
 			}
 			public int Dni_propietario{
@@ -70,7 +59,7 @@ namespace Empresa_constructora
 					return dni_propietario;
 				}
 				set{
-					this.dni_propietario = value;
+					dni_propietario = value;
 				}
 			}
 			public int Codigo_interno{
@@ -78,8 +67,13 @@ namespace Empresa_constructora
 					return codigo_interno;
 				}
 				set{
-					this.codigo_interno = value;
+					codigo_interno = value;
 				}
+			}
+			public void EstablecerAvance(double nuevoAvance)
+			{
+				avance = nuevoAvance;
+				Console.WriteLine($"avance: {avance}");
 			}
 	}
 }

@@ -4,27 +4,31 @@ namespace Empresa_constructora{
 
     public class Clase_Obreros : Clase_persona
     {
-        public int nroLegajo { get; private set; }
-        public double sueldo { get; private set; }
-        public string cargo { get; private set; }
-        public Clase_Obreros(string nombre, string apellido, int dni,int nroLegajo, double sueldo, string cargo) : base(nombre, apellido, dni)
+        public int nroLegajo; 
+        public double sueldo; 
+        public string cargo; 
+
+        public int NroLegajo
+        { 
+            get{ return nroLegajo;} 
+            private set{ nroLegajo = value;} 
+        }
+        public double Sueldo
         {
-            this.nroLegajo = nroLegajo;
-            this.sueldo = sueldo;
-            this.cargo = cargo;
-        } 
-        public void EstablecerSueldo(double nuevoSueldo)
+            get{ return sueldo;} 
+            private set{ sueldo = value;}
+        }
+        public string Cargo
         {
-            sueldo = nuevoSueldo;
-            Console.WriteLine($"Sueldo: {sueldo}");
+            get{ return cargo;} 
+            private set{ cargo = value;}
         }
-        public void EstablecerCargo(string nuevoCargo){
-            cargo = nuevoCargo;
-            Console.WriteLine($"Cargo: {cargo}");
+        public void CrearObrero(int _nroLegajo, double _sueldo, string _cargo)
+        {
+            nroLegajo = _nroLegajo;
+            sueldo = _sueldo;
+            cargo = _cargo;
         }
-        public void EstablecerNroLegajo(int nuevoLegajo){
-            nroLegajo = nuevoLegajo;
-            Console.WriteLine($"Legajo: {nroLegajo}");
-        }
+       
     }
 }

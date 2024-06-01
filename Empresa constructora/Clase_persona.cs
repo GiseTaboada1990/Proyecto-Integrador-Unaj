@@ -4,26 +4,40 @@ namespace Empresa_constructora{
 
     public class Clase_persona
     {
-        private string nombre, apellido;
-        private int dni;
-        public Clase_persona(string nombre, string apellido, int dni){
-            this.nombre = nombre;
-            this.apellido= apellido;
-            this.dni = dni;
-        }
+        public string nombre, apellido;
+        public int dni;
+
         public string Nombre{
-            get{ return nombre;}
+            get{
+                return nombre;
+            }
+            set{
+                nombre = value;
+            }
         }
-        public string Apellido {
-            get{ return apellido;}
+        public string Apellido{
+            get{
+                return apellido;
+            }
+            set{
+                apellido = value;
+            }
         }
-        public int _DNI {
-            get{ return dni;}
+        public int Dni{
+            get{
+                return dni;
+            }
+            set{
+                dni = value;
+            }
         }
-        public void DisplayInfo()
-        {
-            Console.WriteLine($"Nombre: {Nombre} {Apellido}, DNI: {dni}");
+        public void CrearPersona(string _nombre, string _apellido, int _dni){
+            nombre = _nombre;
+            apellido = _apellido;
+            dni = _dni;
         }
+        
+      
         public void UpdateNombre(string nuevoNombre)
         {
             nombre = nuevoNombre;
