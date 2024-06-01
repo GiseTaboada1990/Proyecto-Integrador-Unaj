@@ -7,6 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Collections;
 
 namespace Empresa_constructora
 {
@@ -25,20 +26,17 @@ namespace Empresa_constructora
 			this.codigo_interno = codigo_interno;
 			this.integrantes = integrantes;
 		}
-		public ArrayList integrantes{
+		public ArrayList Integrantes{
 			get{
 				return integrantes;
 
 			}
 		}
-		public int codigo_interno{
+		public int Codigo_interno{
 			get{
 				return codigo_interno;
 			}
 		}
-		public void agregarIntegrante(integrantes nuevo){
-			integrantes.Add(nuevo)
-		}
-		public void 
+		
 	}
 }

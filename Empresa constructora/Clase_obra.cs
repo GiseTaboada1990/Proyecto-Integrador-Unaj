@@ -7,6 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Collections.Generic;
 
 namespace Empresa_constructora
 {
@@ -14,7 +15,7 @@ namespace Empresa_constructora
 	/// Description of Clase_obras. Chau Mensaje nuevo
 	/// </summary>
 	
-		public Clase_obra()
+		public class Clase_obra
 		{
 			//Atributos
 			private bool finalizado;
@@ -23,7 +24,7 @@ namespace Empresa_constructora
 			private int dni_propietario, codigo_interno;
 			
 			//Constructor
-			public class Clase_obras(bool finalizado, double costo, double avance, string nombrePropietario, int dni_propietario, int codigo_interno){
+			public Clase_obra(bool finalizado, double costo, double avance, string nombrePropietario, int dni_propietario, int codigo_interno){
 				this.finalizado = finalizado;
 				this.avance = avance;
 				this.costo = costo;
@@ -32,15 +33,15 @@ namespace Empresa_constructora
 				this.codigo_interno = codigo_interno;
 			}
 			//Propiedades
-			public bool finalizado{
+			public bool Finalizado{
 				get{
-					return finalizo;
+					return finalizado;
 				}
 				set{
 					this.finalizado = value;
 				}
 			}
-			public double avance{
+			public double Avance{
 				get{
 					return avance;
 				}
@@ -48,7 +49,7 @@ namespace Empresa_constructora
 					this.avance = value;
 				}
 			}
-			public double costo{
+			public double Costo{
 				get{
 					return costo;
 				}
@@ -56,7 +57,7 @@ namespace Empresa_constructora
 					this.costo = value;
 				}
 			}
-			public string nombrePropietario{
+			public string NombrePropietario{
 				get{
 					return nombrePropietario;
 				}
@@ -64,7 +65,7 @@ namespace Empresa_constructora
 					this.nombrePropietario = value;
 				}
 			}
-			public int dni_propietario{
+			public int Dni_propietario{
 				get{
 					return dni_propietario;
 				}
@@ -72,7 +73,7 @@ namespace Empresa_constructora
 					this.dni_propietario = value;
 				}
 			}
-			public int codigo_interno{
+			public int Codigo_interno{
 				get{
 					return codigo_interno;
 				}
