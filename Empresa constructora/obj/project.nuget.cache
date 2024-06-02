@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "OIijENXvlx1sWBBJXlTMEujT4yeJVnO78Zdj/kMW8KpIUONlzIZOzU/CwQ/ClVYQre12QeDx5my0C8E6j2I73A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\elizabeth.g.taboada\\OneDrive - Accenture\\Documents\\SharpDevelop Projects\\Empresa constructora\\Empresa constructora\\Empresa constructora.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elizabeth.g.taboada\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.17\\microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\elizabeth.g.taboada\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.17\\microsoft.windowsdesktop.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\elizabeth.g.taboada\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.17\\microsoft.aspnetcore.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\elizabeth.g.taboada\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.17\\microsoft.netcore.app.host.win-x64.7.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}
