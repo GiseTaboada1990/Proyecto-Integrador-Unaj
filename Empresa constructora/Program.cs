@@ -15,7 +15,7 @@ namespace Empresa_constructora
             Clase_obra obra = new Clase_obra();
             // Mostrar la información de la persona
             //persona.DisplayInfo();
-            obrero.CrearPersona("Juan","Perez",21787322);
+            Clase_Obreros obrero.CrearPersona("Juan","Perez",21787322);
             jefe.CrearObrero(36732873, 32763, "Ingeniero");
             jefe.CrearPersona("Gonzalo","Taboada",37987302);
             obrero.CrearObrero(2874833, 32763, "Albañil");
@@ -25,6 +25,7 @@ namespace Empresa_constructora
             //grupo.MostrarObreros();
             obra.CrearObra("Torre San Juan", false, 30000000,45, "Messi", 37849293, 3728);
             empresa.ListaDeObras();
+            //mensajito
         }
     }
 }
