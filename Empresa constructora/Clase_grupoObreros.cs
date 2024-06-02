@@ -34,9 +34,5 @@ namespace Empresa_constructora
                 Console.WriteLine($"{obrero.nombre} {obrero.apellido}, Cargo: {obrero.cargo}, Sueldo: {obrero.sueldo}");
             }
         }
-		public void Mostrar()
-		{
-			Console.WriteLine($"grupo: {grupo}");
-		}
 	}
 }

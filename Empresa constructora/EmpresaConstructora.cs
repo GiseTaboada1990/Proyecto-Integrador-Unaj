@@ -1,12 +1,4 @@
-﻿/*
- * Created by SharpDevelop.
- * User: elizabeth.g.taboada
- * Date: 5/29/2024
- * Time: 3:44 PM
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Empresa_constructora
@@ -31,7 +23,16 @@ namespace Empresa_constructora
 		public void EliminarObra(Clase_obra obra){
 			obras.Remove(obra);
 		}
-		
-		//Métodos para recuperar
+		public int CantidadObras()
+		{
+			return obras.Count;
+		}
+		public void ListaDeObras()
+		{
+			foreach(var obra in obras)
+			{
+				Console.WriteLine($"obra: {obra.NombreObra}");
+			}
+		}
 	}	
 }

@@ -19,7 +19,7 @@ namespace Empresa_constructora{
        }
        public  Jefe_de_Obra()
        {
-        this.grupo = new Clase_grupoObreros();
+            grupo = new Clase_grupoObreros();
        }
        public void AgregarObrero(Clase_Obreros obrero)
         {

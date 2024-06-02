@@ -6,22 +6,27 @@ namespace Empresa_constructora
 		public class Clase_obra : EmpresaConstructora
 		{
 			//Atributos
+			private string nombreObra;
 			private bool finalizado;
 			private double avance, costo;
 			private string nombrePropietario;
 			private int dni_propietario, codigo_interno;
+			private Jefe_de_Obra jefe;
 			
-			
-			//Constructor
-			public Clase_obra(bool finalizado, double costo, double avance, string nombrePropietario, int dni_propietario, int codigo_interno){
-				this.finalizado = finalizado;
-				this.avance = avance;
-				this.costo = costo;
-				this.nombrePropietario = nombrePropietario;
-				this.dni_propietario = dni_propietario;
-				this.codigo_interno = codigo_interno;
-			}
 			//Propiedades
+			public string NombreObra{
+				get{
+					return nombreObra;
+				}
+				set{
+					nombreObra = value;
+				}
+			}
+			public Jefe_de_Obra Jefe
+			{
+				get{ return jefe;}
+				set{ jefe = value;}
+			}
 			public bool Finalizado{
 				get{
 					return finalizado;
@@ -69,6 +74,17 @@ namespace Empresa_constructora
 				set{
 					codigo_interno = value;
 				}
+			}
+			public void CrearObra(string nombreObra,bool finalizado, double costo, double avance, string nombrePropietario, int dni_propietario, int codigo_interno){
+				
+				this.nombreObra = nombreObra;
+				this.finalizado = finalizado;
+				this.avance = avance;
+				this.costo = costo;
+				this.nombrePropietario = nombrePropietario;
+				this.dni_propietario = dni_propietario;
+				this.codigo_interno = codigo_interno;
+				Console.WriteLine($"obra: {NombreObra}");
 			}
 			public void EstablecerAvance(double nuevoAvance)
 			{
