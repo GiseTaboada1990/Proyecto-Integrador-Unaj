@@ -75,8 +75,8 @@ namespace Empresa_constructora
 					codigo_interno = value;
 				}
 			}
-			public void CrearObra(string nombreObra,bool finalizado, double costo, double avance, string nombrePropietario, int dni_propietario, int codigo_interno){
-				
+			public void CrearObra(Jefe_de_Obra jefe,string nombreObra,bool finalizado, double costo, double avance, string nombrePropietario, int dni_propietario, int codigo_interno){
+				this.jefe = jefe;
 				this.nombreObra = nombreObra;
 				this.finalizado = finalizado;
 				this.avance = avance;
@@ -84,12 +84,15 @@ namespace Empresa_constructora
 				this.nombrePropietario = nombrePropietario;
 				this.dni_propietario = dni_propietario;
 				this.codigo_interno = codigo_interno;
-				Console.WriteLine($"obra: {NombreObra}");
 			}
 			public void EstablecerAvance(double nuevoAvance)
 			{
 				avance = nuevoAvance;
 				Console.WriteLine($"avance: {avance}");
+			}
+			public void MostrarObreros()
+			{
+				jefe.MostrarObreros();
 			}
 	}
 }
