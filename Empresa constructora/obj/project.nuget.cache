@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "OIijENXvlx1sWBBJXlTMEujT4yeJVnO78Zdj/kMW8KpIUONlzIZOzU/CwQ/ClVYQre12QeDx5my0C8E6j2I73A==",
+  "dgSpecHash": "6f98/a3O9XaWWXRd5Gb1ja7M4oaoy/vwFffwK4hkXNkryMyzJBz4AnXlSkqcESjKFLQobrYKrp7RtfU1MrlgSw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elizabeth.g.taboada\\OneDrive - Accenture\\Documents\\SharpDevelop Projects\\Empresa constructora\\Empresa constructora\\Empresa constructora.csproj",
+  "projectFilePath": "C:\\Users\\gadic\\OneDrive\\Escritorio\\proyecto final\\Proyecto-Integrador-Unaj\\Empresa constructora\\Empresa constructora.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\elizabeth.g.taboada\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.17\\microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
-    "C:\\Users\\elizabeth.g.taboada\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.17\\microsoft.windowsdesktop.app.ref.7.0.17.nupkg.sha512",
-    "C:\\Users\\elizabeth.g.taboada\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.17\\microsoft.aspnetcore.app.ref.7.0.17.nupkg.sha512",
-    "C:\\Users\\elizabeth.g.taboada\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.17\\microsoft.netcore.app.host.win-x64.7.0.17.nupkg.sha512"
+    "C:\\Users\\gadic\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.18\\microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\gadic\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.18\\microsoft.windowsdesktop.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\gadic\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.18\\microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\gadic\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.18\\microsoft.netcore.app.host.win-x64.7.0.18.nupkg.sha512"
   ],
   "logs": []
 }
