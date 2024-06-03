@@ -18,7 +18,7 @@ namespace Empresa_constructora
 			get{return codigo_interno;}
 			set{ codigo_interno = value;}
 		}
-		public void AgregarObrero(Clase_Obreros obrero)
+		public void AsignarObreroAgrupo(Clase_Obreros obrero)
 		{
 			grupo.Add(obrero);
 		}

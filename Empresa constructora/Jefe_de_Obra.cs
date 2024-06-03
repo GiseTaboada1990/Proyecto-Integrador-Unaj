@@ -23,7 +23,7 @@ namespace Empresa_constructora{
        }
        public void AgregarObrero(Clase_Obreros obrero)
         {
-            grupo.AgregarObrero(obrero);
+            grupo.AsignarObreroAgrupo(obrero);
         }
 
         public void MostrarObreros()

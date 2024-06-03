@@ -30,8 +30,8 @@ namespace Empresa_constructora
             jefe1.CrearObrero(2874833, 32763, "Ingeniero");
             jefe.AgregarObrero(obrero);
             jefe1.AgregarObrero(obrero1);
-            grupo.AgregarObrero(jefe1);
-            grupo.AgregarObrero(obrero);
+            grupo.AsignarObreroAgrupo(jefe1);
+            grupo.AsignarObreroAgrupo(obrero);
             //Console.WriteLine($"Nombre: {jefe.Nombre} {jefe.Apellido}, DNI: {jefe.Dni}, legajo: {jefe.NroLegajo}, sueldo: {jefe.Sueldo}, cargo: {jefe.Cargo}");
             //grupo.MostrarObreros();
             obra.CrearObra(jefe,"Torre San Luis", false, 30000000,45, "Messi", 37849293, 3728);
