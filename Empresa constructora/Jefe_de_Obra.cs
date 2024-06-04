@@ -19,12 +19,7 @@ namespace Empresa_constructora{
        }
        public  Jefe_de_Obra(string _nombre, string _apellido, int _dni, int _nroLegajo, double _sueldo, string _cargo, double _bonificacion) : base(_nombre,_apellido,_dni,_nroLegajo,_sueldo,_cargo)
        {
-<<<<<<< HEAD
         grupo = new Clase_grupoObreros();
-=======
-            bonificacion = _bonificacion;
-            grupo = new Clase_grupoObreros();
->>>>>>> gadiel2
        }
        public void AgregarObrero(Clase_Obreros obrero)
         {
