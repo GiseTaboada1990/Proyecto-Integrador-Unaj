@@ -31,7 +31,7 @@ namespace Empresa_constructora{
                 dni = value;
             }
         }
-        public void CrearPersona(string _nombre, string _apellido, int _dni){
+        public Clase_persona(string _nombre, string _apellido, int _dni){
             nombre = _nombre;
             apellido = _apellido;
             dni = _dni;

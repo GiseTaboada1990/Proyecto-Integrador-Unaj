@@ -11,3 +11,16 @@ C:\Users\elizabeth.g.taboada\OneDrive - Accenture\Documents\SharpDevelop Project
 C:\Users\elizabeth.g.taboada\OneDrive - Accenture\Documents\SharpDevelop Projects\Empresa constructora\Empresa constructora\obj\Debug\net7.0\Empresa constructora.pdb
 C:\Users\elizabeth.g.taboada\OneDrive - Accenture\Documents\SharpDevelop Projects\Empresa constructora\Empresa constructora\obj\Debug\net7.0\Empresa constructora.genruntimeconfig.cache
 C:\Users\elizabeth.g.taboada\OneDrive - Accenture\Documents\SharpDevelop Projects\Empresa constructora\Empresa constructora\obj\Debug\net7.0\ref\Empresa constructora.dll
+C:\Users\gadic\OneDrive\Escritorio\proyecto final\Proyecto-Integrador-Unaj\Empresa constructora\obj\Debug\net7.0\Empresa constructora.dll
+C:\Users\gadic\OneDrive\Escritorio\proyecto final\Proyecto-Integrador-Unaj\Empresa constructora\obj\Debug\net7.0\refint\Empresa constructora.dll
+C:\Users\gadic\OneDrive\Escritorio\proyecto final\Proyecto-Integrador-Unaj\Empresa constructora\obj\Debug\net7.0\Empresa constructora.pdb
+C:\Users\gadic\OneDrive\Escritorio\proyecto final\Proyecto-Integrador-Unaj\Empresa constructora\bin\Debug\net7.0\Empresa constructora.exe
+C:\Users\gadic\OneDrive\Escritorio\proyecto final\Proyecto-Integrador-Unaj\Empresa constructora\bin\Debug\net7.0\Empresa constructora.deps.json
+C:\Users\gadic\OneDrive\Escritorio\proyecto final\Proyecto-Integrador-Unaj\Empresa constructora\bin\Debug\net7.0\Empresa constructora.runtimeconfig.json
+C:\Users\gadic\OneDrive\Escritorio\proyecto final\Proyecto-Integrador-Unaj\Empresa constructora\bin\Debug\net7.0\Empresa constructora.dll
+C:\Users\gadic\OneDrive\Escritorio\proyecto final\Proyecto-Integrador-Unaj\Empresa constructora\bin\Debug\net7.0\Empresa constructora.pdb
+C:\Users\gadic\OneDrive\Escritorio\proyecto final\Proyecto-Integrador-Unaj\Empresa constructora\obj\Debug\net7.0\Empresa constructora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gadic\OneDrive\Escritorio\proyecto final\Proyecto-Integrador-Unaj\Empresa constructora\obj\Debug\net7.0\Empresa constructora.csproj.CoreCompileInputs.cache
+C:\Users\gadic\OneDrive\Escritorio\proyecto final\Proyecto-Integrador-Unaj\Empresa constructora\obj\Debug\net7.0\Empresa constructora.sourcelink.json
+C:\Users\gadic\OneDrive\Escritorio\proyecto final\Proyecto-Integrador-Unaj\Empresa constructora\obj\Debug\net7.0\Empresa constructora.genruntimeconfig.cache
+C:\Users\gadic\OneDrive\Escritorio\proyecto final\Proyecto-Integrador-Unaj\Empresa constructora\obj\Debug\net7.0\ref\Empresa constructora.dll
