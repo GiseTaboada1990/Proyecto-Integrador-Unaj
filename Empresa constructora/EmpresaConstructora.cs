@@ -1,132 +1,206 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 namespace Empresa_constructora
 {
-	//atributos
-	public class EmpresaConstructora{
-		public List<Clase_obra>  obras;
-		public List<Jefe_de_Obra> jefes;
-		public List<Clase_Obreros> obreros;
-		public List<Clase_grupoObreros> grupos;
-		Clase_grupoObreros[] grupo_obrero= new Clase_grupoObreros[8];
-		
-		//Constructor
-		public EmpresaConstructora(){
-			obras = new List<Clase_obra>();
-			jefes = new List<Jefe_de_Obra>();
-			obreros = new List<Clase_Obreros>();
-			grupos = new List<Clase_grupoObreros>();
-			
-		}
-		//Propiedades
-		
-		//Métodos para agregar
-		public void AgregarObra(Clase_obra nuevo){
-			obras.Add(nuevo);
-		}
-		
-		//Métodos para eliminar
-		public void EliminarObra(Clase_obra obra){
-			obras.Remove(obra);
-		}
-		public void AgregarJefe(Jefe_de_Obra jefe)
-		{
-			jefes.Add(jefe);
-		}
-		public int CantidadObras()
-		{
-			Console.WriteLine($"Cantidad: {obras.Count}");
-			return obras.Count;
-		}
-		public void ListaDeJefes()
-		{
-			for(int i = 0; i < jefes.Count; i++)
-			{
-				Console.WriteLine($"Lista de jefes: {jefes[i].Cargo} {jefes[i].Nombre} {jefes[i].Apellido}");
-			}
-		}
-		public void ListaDeObras()
-		{
-			for(int i = 0; i < obras.Count; i++)
-			{
-				Console.WriteLine($"{i+1}- {obras[i].NombreObra}");
-			}
-		}
-		public void InfoObras()
-		{
-			foreach(var obra in obras)
-			{
-				
-				Console.WriteLine($"obra: {obra.NombreObra}, jefe: {obra.Jefe.Nombre} {obra.Jefe.Apellido}");
-				obra.MostrarObreros();
-			}
-		}
-		public void AgregarObrero(Clase_Obreros nuevoObrero)
-		{
-			obreros.Add(nuevoObrero);
-		}
-		public void ListObreros()
-		{
-			for(int i = 0; i < obreros.Count; i++)
-			{
-				Console.WriteLine($"{i+1}- {obreros[i].Nombre} {obreros[i].Apellido}, legajo: {obreros[i].NroLegajo}, cargo: {obreros[i].Cargo}");
-			}
-		}
-		public void AsignarObra()
-		{
-			foreach(var obra in obras)
-			{
-				foreach(var group in grupos)
-				{
-					if(group.Codigo_interno == obra.Codigo_interno)
-					{
-						grupo_obrero[0] = new Clase_grupoObreros();
-					}
-				}
-			}
-		}
-		public static void reclutar_obrero()
+    //atributos
+    public class EmpresaConstructora
+    {
+        protected List<Obra> obras;
+        protected List<Jefe_de_Obra> jefes;
+        protected List<Obrero> obreros;
+        protected GrupoObrero[] grupos;
+        protected int contadorCodigoObra;
+
+        //Constructor
+        public EmpresaConstructora()
+        {
+            obras = new List<Obra>();
+            jefes = new List<Jefe_de_Obra>();
+            obreros = new List<Obrero>();
+            contadorCodigoObra = 1;
+            grupos = new GrupoObrero[8]; // Inicialización del vector con 8 grupos
+
+            for (int i = 0; i < grupos.Length; i++)
             {
-                string nombre, apellido, cargo;
-                int legajo, dni;
-                double sueldo;
-                Console.Write("ingrese el nombre del nuevo obrero: ");
-                nombre = Console.ReadLine();
-                Console.Write("ingrese el apellido del nuevo obrero: ");
-                apellido = Console.ReadLine();
-                Console.Write("ingrese el DNI del nuevo obrero: ");
-                dni = int.Parse(Console.ReadLine());
-                Console.Write("ingrese el cargo del nuevo obrero: ");
-                cargo = Console.ReadLine();
-                Console.Write("ingrese el sueldo del nuevo obrero: ");
-                sueldo = double.Parse(Console.ReadLine());
-                Console.Write("ingrese el numero de legajo del nuevo obrero: ");
-                legajo = int.Parse(Console.ReadLine());
-                Clase_Obreros obrero = new Clase_Obreros(nombre,apellido,dni,legajo,sueldo,cargo);
-                Console.WriteLine("El obrero " + nombre + " y DNI Nº " + dni + " se creo correctamente" );
+                grupos[i] = new GrupoObrero();
             }
-			public static void reclutar_Jefe_de_obra()
+
+        }
+        //Propiedades
+        public List<Obra> Obras
+        {
+            get { return obras; }
+            set { obras = value; }
+        }
+        public List<Jefe_de_Obra> Jefes
+        {
+            get { return jefes; }
+            set { jefes = value; }
+        }
+         public List<Obrero> Obreros
+        {
+            get { return obreros; }
+            set { obreros = value; }
+        }
+        public GrupoObrero[] Grupos
+        {
+            get { return grupos; }
+            set { grupos = value; }
+        }
+        public int ObtenerNuevoCodigoObra()
+        {
+            return contadorCodigoObra++;
+        }
+        public void ContratarObrero(Obrero obrero, int num_grupo)
+        {
+            Obreros.Add(obrero);
+            grupos[num_grupo].AsignarAgrupo(obrero);
+        }
+
+        public void DespedirObrero(int dni)
+        {
+            Obrero obrero = Obreros.Find(o => o.Dni == dni);
+            if (obrero != null)
             {
-                string nombre, apellido, cargo;
-                int legajo, dni;
-                double sueldo, bonificacion;
-                Console.Write("ingrese el nombre del nuevo Jefe de obra: ");
-                nombre = Console.ReadLine();
-                Console.Write("ingrese el apellido del nuevo Jefe de obra: ");
-                apellido = Console.ReadLine();
-                Console.Write("ingrese el DNI del nuevo Jefe de obra: ");
-                dni = int.Parse(Console.ReadLine());
-                Console.Write("ingrese el cargo del nuevo Jefe de obra: ");
-                cargo = Console.ReadLine();
-                Console.Write("ingrese el sueldo del nuevo Jefe de obra: ");
-                sueldo = double.Parse(Console.ReadLine());
-                Console.Write("ingrese el numero de legajo del nuevo Jefe de obra: ");
-                legajo = int.Parse(Console.ReadLine());
-				Console.Write("ingrese la bonificacion de sueldo del nuevo Jefe de obra: ");
-                bonificacion = double.Parse(Console.ReadLine());
-                Jefe_de_Obra Jefe = new Jefe_de_Obra(nombre,apellido,dni,legajo,sueldo,cargo,bonificacion);
-                Console.WriteLine("El Jefe de obra " + nombre + " y DNI Nº " + dni + " se creo correctamente" );
+                Obreros.Remove(obrero);
+                foreach (var grupo in grupos)
+                {
+                    grupo.EliminarObrero(obrero);
+                }
             }
-	}	
+        }
+        public void ContratarJefe(Jefe_de_Obra jefe)
+        {
+                Obreros.Add(jefe);
+                jefes.Add(jefe);
+           
+        }
+        public GrupoObrero ObtenerGrupoLibre()
+        {
+            foreach (var grupo in grupos)
+            {
+                if (grupo.Obrero.Count > 0 && grupo.CodigoObra == 0)
+                {
+                    return grupo;
+                }
+            }
+            return null;
+        }
+        public void EliminarGrupo(int num_grupo){
+            GrupoObrero grupo = Array.Find(grupos, g => g.CodigoObra == num_grupo);
+            if (grupo != null)
+            {
+                grupo.LiberarObra();
+            }
+        }
+        public void DespedirJefe(Jefe_de_Obra jefeObra)
+        {
+                jefes.Remove(jefeObra);
+        }
+        public void ListaDeJefes()
+        {
+            for (int i = 0; i < jefes.Count; i++)
+            {
+                Console.WriteLine(jefes[i].ToString());
+            }
+        }
+        public int CantidadJefes(){
+            return jefes.Count;
+        }
+        public void ListaObras(){
+            foreach (var o in obras){
+                Console.WriteLine(o);
+            }
+        }
+        public void EliminarObra(int codigo){
+            Obra obra = obras.Find(o => o.Codigo_interno == codigo);
+            obras.Remove(obra);
+        }
+        public int CantidadObras()
+        {
+            return obras.Count;
+        }
+        public void InfoObras()
+        {
+            foreach (var obra in obras)
+            {
+
+                Console.WriteLine(obra.ToString());
+                if(obra.Jefe != null && obra.Jefe.Grupo != null){
+                    Console.WriteLine(obra.Jefe.Grupo.ToString());
+                }
+            }
+        }
+        public void ListaGrupos()
+        {
+            foreach (var grupo in grupos)
+            {
+                
+                    Console.WriteLine(grupo.ToString());
+                
+            }
+        }
+        public void ListObrero()
+        {
+            for (int i = 0; i < Obreros.Count; i++)
+            {
+                Console.WriteLine(Obreros[i].ToString());
+            }
+        }
+        public int CantidadObreros(){
+            return obreros.Count;
+        }
+        //Seteamos el avance de la obra, primero la buscamos con el Find en la lista de obras usando el codigo interno
+
+        public void ListaDEObrasFinalizadas()
+        {
+            foreach (var obra in obras)
+            {
+                if (obra.Finalizado == true)
+                {
+                    Console.WriteLine(obra);
+                }
+            }
+        }
+        public void ListaDeObrasEnEjecucion()
+        {
+            foreach (var obra in obras)
+            {
+                if (obra.Finalizado == false)
+                {
+                    Console.WriteLine(obra);
+                }
+            }
+        }
+
+        public double PorcentajeObrasEnEjecucion()
+        {
+            int remodelacionesSinFinalizar = 0;
+            int totalRemodelaciones = 0;
+            
+            foreach (var obra in obras)
+            {
+                if (obra.TipoObra == "remodelación")
+                {
+                    totalRemodelaciones++;
+                }
+
+                if (obra.Avance < 100)
+                {
+                    remodelacionesSinFinalizar++;
+                }
+            }
+            if (totalRemodelaciones > 0)
+            {
+                double porcentaje=(double)remodelacionesSinFinalizar * 100 / totalRemodelaciones;
+                return porcentaje;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+    }
 }
